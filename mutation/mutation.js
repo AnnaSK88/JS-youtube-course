@@ -44,3 +44,12 @@ console.log(person.name) // Stepa
 
 //3 вариант
 //полностью избежать мутации с json !!!!
+// создание абсолютно нового обьекта включая вложенные ссылки
+const person5 = JSON.parse(JSON.stringify(person))
+
+person5.name = 'Olga'
+
+
+console.log(person5.name)// olga
+console.log(person.name)// stepa
+console.log(person5)//{ name: 'Olga', age: 99 }
